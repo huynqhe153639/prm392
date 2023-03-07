@@ -11,12 +11,11 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="296dp"
+        android:layout_marginTop="52dp"
         android:text="Order Management"
-        app:layout_constraintBottom_toTopOf="@+id/rv_result"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,10 +23,10 @@
         android:id="@+id/edit_date"
         android:layout_width="250dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/edit_lineCount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_number" />
 
@@ -35,10 +34,10 @@
         android:id="@+id/edit_customerName"
         android:layout_width="250dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:text="Custormer Name"
-        app:layout_constraintBottom_toTopOf="@+id/bt_update"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_lineCount" />
 
@@ -46,10 +45,10 @@
         android:id="@+id/edit_lineCount"
         android:layout_width="250dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:text="Line count"
-        app:layout_constraintBottom_toTopOf="@+id/edit_customerName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_date" />
 
@@ -57,65 +56,67 @@
         android:id="@+id/edit_number"
         android:layout_width="250dp"
         android:layout_height="55dp"
+        android:layout_marginTop="128dp"
         android:text="Number"
-        app:layout_constraintBottom_toTopOf="@+id/edit_date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
-    <Button
-        android:id="@+id/bt_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="271dp"
-        android:text="Add"
-        app:layout_constraintEnd_toStartOf="@+id/bt_update"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/bt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_update"
+        app:layout_constraintEnd_toStartOf="@+id/bt_update"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/bt_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="412dp"
+        android:layout_marginTop="36dp"
         android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bt_delete"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bt_add" />
+        app:layout_constraintStart_toEndOf="@+id/bt_add"
+        app:layout_constraintTop_toBottomOf="@+id/edit_customerName" />
 
     <Button
         android:id="@+id/bt_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="474dp"
+        android:layout_marginBottom="7dp"
         android:text="List"
-        app:layout_constraintBaseline_toBaselineOf="@+id/bt_delete"
+        app:layout_constraintBottom_toTopOf="@+id/rv_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bt_delete" />
+        app:layout_constraintStart_toEndOf="@+id/bt_delete"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bt_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_update"
         app:layout_constraintEnd_toStartOf="@+id/bt_list"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bt_update"
-        app:layout_constraintTop_toTopOf="@+id/bt_update" />
+        app:layout_constraintStart_toEndOf="@+id/bt_update" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_result"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
